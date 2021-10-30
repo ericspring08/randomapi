@@ -17,4 +17,4 @@ app.use(integer)
 app.use(boolean)
 app.use(date)
 
-app.listen(5000)
+app.listen(process.env.PORT || 5000)
