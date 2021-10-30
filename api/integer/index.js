@@ -4,7 +4,7 @@ const router = express.Router()
 
 router.get("/api/integer", function(req, res) {
     var minumum = 0
-    var maximum = 10
+    var maximum = 9
     try {
         if(req.query.min){
             minumum = req.query.min
@@ -13,7 +13,7 @@ router.get("/api/integer", function(req, res) {
         if(req.query.max){
             maximum = req.query.max
         }
-        const randomNum = random.int((min = parseInt(minumum)), (max = parseInt(maximum)))
+        const randomNum = random.int((min = parseInt(minumum)), (max = parseInt(maximum-1)))
         res.json({
             integer: randomNum 
         })

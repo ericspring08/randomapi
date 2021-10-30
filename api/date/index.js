@@ -10,9 +10,13 @@ router.get("/api/date", function(req, res) {
     const day = random.int(1, parseInt(day_amount))
 
     const date = month + " " + day
+    const monthInt = month_index
 
     res.json({
-        date: date
+        date: date,
+        monthInt: monthInt,
+        month: month,
+        day: day
     })
 }) 
 
