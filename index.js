@@ -5,7 +5,7 @@ const app = express()
 
 
 app.use(cors())
-app.use(bodyParser.urlencoded())
+app.use(bodyParser.urlencoded({extended: false}))
 
 // import modules
 const integer = require('./api/integer')
