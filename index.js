@@ -1,11 +1,18 @@
 const bodyParser = require("body-parser")
 const express = require("express")
 const cors = require("cors")
+const path = require("path")
+const public = require("./public")
 const app = express()
 
 
 app.use(cors())
 app.use(bodyParser.urlencoded({extended: false}))
+app.set('views', path.join(__dirname, 'public'));
+app.set('view engine', 'ejs');
+
+// website
+app.use(public)
 
 // import modules
 const integer = require('./api/integer')
