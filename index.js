@@ -17,11 +17,13 @@ app.use(public)
 // import modules
 const integer = require('./api/integer')
 const boolean = require('./api/boolean')
-const date = require("./api/date")
+const date = require('./api/date')
+const color = require('./api/color')
 
 // use module imports
 app.use(integer)
 app.use(boolean)
 app.use(date)
+app.use(color)
 
 app.listen(process.env.PORT || 5000)
