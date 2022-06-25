@@ -9,7 +9,7 @@ router.get("/api/float", function(req, res) {
     var randomNum = 0
     try {
         if(req.query.digits){
-            digits = req.query.max
+            digits = req.query.digits
         }
 
         if(req.query.max) {
@@ -20,12 +20,13 @@ router.get("/api/float", function(req, res) {
             min = req.query.min
         }
 
-        
+        randomNum = parseFloat(random.float((min = parseInt(min)), (max = parseInt(max))).toFixed(digits))
 
         res.json({
             float: randomNum 
         })
     } catch(e) {
+        console.log(e)
         res.json({
             error: "An error occured"
         })

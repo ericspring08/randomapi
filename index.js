@@ -19,11 +19,13 @@ const integer = require('./api/integer')
 const boolean = require('./api/boolean')
 const date = require('./api/date')
 const color = require('./api/color')
+const float = require('./api/float')
 
 // use module imports
 app.use(integer)
 app.use(boolean)
 app.use(date)
 app.use(color)
+app.use(float)
 
 app.listen(process.env.PORT || 5000)
