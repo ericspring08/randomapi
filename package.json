@@ -16,5 +16,8 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "random": "^3.0.6"
+  },
+  "devDependencies": {
+    "axios": "^0.27.2"
   }
 }
