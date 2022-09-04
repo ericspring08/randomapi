@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
   },
   "author": "Eric Zhang",
   "license": "ISC",
@@ -15,5 +16,8 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "random": "^3.0.6"
+  },
+  "devDependencies": {
+    "axios": "^0.27.2"
   }
 }
