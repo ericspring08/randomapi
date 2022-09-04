@@ -28,4 +28,6 @@ app.use(date)
 app.use(color)
 app.use(float)
 
-app.listen(process.env.PORT || 5000)
+app.listen(process.env.PORT || 5000, () => {
+  console.log(`server running on ${process.env.PORT || 5000})
+})
